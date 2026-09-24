@@ -132,6 +132,49 @@ def get_benchmark():
             benchmark_data = json.load(f)
     return benchmark_data
 
+# Cached listings for market comparables
+_listings_cache = None
+
+def get_listings_data():
+    """Load real PakWheels & OLX market listings for comparables. Falls back to empty list gracefully."""
+    global _listings_cache
+    if _listings_cache is not None:
+        return _listings_cache
+
+    LISTINGS_PATH = os.path.join(ROOT_DIR, "data", "real_pakwheels_olx_combined.csv")
+    listings = []
+    try:
+        if os.path.exists(LISTINGS_PATH):
+            import pandas as pd
+            df = pd.read_csv(LISTINGS_PATH, nrows=500)
+            for _, row in df.iterrows():
+                try:
+                    listings.append({
+                        "id": str(row.get("id", "")),
+                        "title": str(row.get("title", "")),
+                        "source": str(row.get("source", "PakWheels")),
+                        "make": str(row.get("make", "")),
+                        "model": str(row.get("model", "")),
+                        "year": int(row.get("year", 2020)) if not pd.isna(row.get("year", None)) else 2020,
+                        "price_pkr": float(row.get("price_pkr", 0)) if not pd.isna(row.get("price_pkr", None)) else 0,
+                        "price_formatted": str(row.get("price_formatted", "")),
+                        "price_in_lacs": str(row.get("price_in_lacs", "")),
+                        "mileage_km": int(row.get("mileage_km", 0)) if not pd.isna(row.get("mileage_km", None)) else 0,
+                        "mileage_formatted": str(row.get("mileage_formatted", "")),
+                        "registered_city": str(row.get("registered_city", "")),
+                        "image_url": str(row.get("image_url", "")),
+                        "url": str(row.get("url", "")),
+                        "condition_badge": str(row.get("condition_badge", "Verified Ad")),
+                    })
+                except Exception:
+                    continue
+    except Exception as e:
+        logging.warning(f"Could not load listings data: {e}")
+
+    _listings_cache = listings
+    return listings
+
+
 def format_pkr(amount: float) -> str:
     """Formats number in Pakistani currency convention (Lacs & Crores)."""
     if amount >= 10_000_000:
