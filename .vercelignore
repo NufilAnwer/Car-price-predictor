@@ -1,0 +1,27 @@
+# Exclude large training/test data files not needed at runtime
+train-data.csv
+test-data.csv
+
+# Exclude raw data CSVs (only real_pakwheels_olx_combined.csv is needed for comparables)
+data/pakistan_cars_train.csv
+data/pakistan_cars_test.csv
+data/pakistan_used_cars_dataset.csv
+data/olx_listings.csv
+data/pakwheels_listings.csv
+
+# Exclude scrapers and notebooks (not needed for web app)
+scrapers/
+Pakistan_Car_Price_Prediction.ipynb
+Project.ipynb
+generate_notebook.py
+test_imports.py
+models/train_model.py
+
+# Exclude Python caches
+__pycache__/
+app/__pycache__/
+*.pyc
+*.pyo
+
+# Exclude git
+.git/
