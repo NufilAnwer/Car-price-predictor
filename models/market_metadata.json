@@ -1,0 +1,536 @@
+{
+  "makes": [
+    "Changan",
+    "Daihatsu",
+    "Honda",
+    "Hyundai",
+    "KIA",
+    "MG",
+    "Nissan",
+    "Suzuki",
+    "Toyota"
+  ],
+  "make_models": {
+    "Changan": [
+      "Alsvin",
+      "Karvaan"
+    ],
+    "Daihatsu": [
+      "Cuore",
+      "Mira"
+    ],
+    "Honda": [
+      "BR-V",
+      "City",
+      "Civic",
+      "Vezel"
+    ],
+    "Hyundai": [
+      "Elantra",
+      "Sonata",
+      "Tucson"
+    ],
+    "KIA": [
+      "Picanto",
+      "Sportage",
+      "Stonic"
+    ],
+    "MG": [
+      "HS"
+    ],
+    "Nissan": [
+      "Dayz"
+    ],
+    "Suzuki": [
+      "Alto",
+      "Bolan",
+      "Cultus",
+      "Cultus (Old)",
+      "Every",
+      "Mehran",
+      "Swift",
+      "Swift (Old)",
+      "Wagon R"
+    ],
+    "Toyota": [
+      "Aqua",
+      "Corolla",
+      "Fortuner",
+      "Hilux",
+      "Prado",
+      "Prius",
+      "Vitz",
+      "Yaris"
+    ]
+  },
+  "model_details": {
+    "Sonata": {
+      "make": "Hyundai",
+      "variants": [
+        "2.5"
+      ],
+      "default_engine_cc": 2500,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2021,
+      "max_year": 2024,
+      "avg_price_lacs": 89.69
+    },
+    "Wagon R": {
+      "make": "Suzuki",
+      "variants": [
+        "VXL"
+      ],
+      "default_engine_cc": 1000,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2014,
+      "max_year": 2024,
+      "avg_price_lacs": 24.63
+    },
+    "Corolla": {
+      "make": "Toyota",
+      "variants": [
+        "Altis 1.6",
+        "Altis Grande 1.8",
+        "GLi 1.3",
+        "GLi 1.3 Automatic"
+      ],
+      "default_engine_cc": 1300,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2010,
+      "max_year": 2024,
+      "avg_price_lacs": 37.59
+    },
+    "Alsvin": {
+      "make": "Changan",
+      "variants": [
+        "1.5 Lumiere DCT"
+      ],
+      "default_engine_cc": 1500,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2021,
+      "max_year": 2024,
+      "avg_price_lacs": 38.03
+    },
+    "Hilux": {
+      "make": "Toyota",
+      "variants": [
+        "Revo Rocco"
+      ],
+      "default_engine_cc": 2800,
+      "default_transmission": "Automatic",
+      "default_fuel": "Diesel",
+      "min_year": 2018,
+      "max_year": 2024,
+      "avg_price_lacs": 131.21
+    },
+    "Aqua": {
+      "make": "Toyota",
+      "variants": [
+        "Hybrid S"
+      ],
+      "default_engine_cc": 1500,
+      "default_transmission": "Automatic",
+      "default_fuel": "Hybrid",
+      "min_year": 2013,
+      "max_year": 2021,
+      "avg_price_lacs": 23.58
+    },
+    "Mira": {
+      "make": "Daihatsu",
+      "variants": [
+        "ES"
+      ],
+      "default_engine_cc": 660,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2012,
+      "max_year": 2022,
+      "avg_price_lacs": 19.65
+    },
+    "Fortuner": {
+      "make": "Toyota",
+      "variants": [
+        "Sigma 4 2.8 Diesel"
+      ],
+      "default_engine_cc": 2800,
+      "default_transmission": "Automatic",
+      "default_fuel": "Diesel",
+      "min_year": 2018,
+      "max_year": 2024,
+      "avg_price_lacs": 153.93
+    },
+    "Stonic": {
+      "make": "KIA",
+      "variants": [
+        "EX+"
+      ],
+      "default_engine_cc": 1400,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2021,
+      "max_year": 2024,
+      "avg_price_lacs": 45.13
+    },
+    "Cultus": {
+      "make": "Suzuki",
+      "variants": [
+        "Auto Gear Shift",
+        "VXL"
+      ],
+      "default_engine_cc": 1000,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2017,
+      "max_year": 2024,
+      "avg_price_lacs": 31.83
+    },
+    "City": {
+      "make": "Honda",
+      "variants": [
+        "1.3 i-VTEC",
+        "1.5 Aspire CVT (New Shape)",
+        "Aspire 1.5 Prosmatec",
+        "i-DSI 1.3"
+      ],
+      "default_engine_cc": 1300,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2004,
+      "max_year": 2024,
+      "avg_price_lacs": 24.61
+    },
+    "BR-V": {
+      "make": "Honda",
+      "variants": [
+        "i-VTEC S"
+      ],
+      "default_engine_cc": 1500,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2017,
+      "max_year": 2024,
+      "avg_price_lacs": 36.99
+    },
+    "Bolan": {
+      "make": "Suzuki",
+      "variants": [
+        "VX Euro II"
+      ],
+      "default_engine_cc": 800,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2010,
+      "max_year": 2024,
+      "avg_price_lacs": 10.51
+    },
+    "Tucson": {
+      "make": "Hyundai",
+      "variants": [
+        "AWD"
+      ],
+      "default_engine_cc": 2000,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2020,
+      "max_year": 2024,
+      "avg_price_lacs": 69.84
+    },
+    "Alto": {
+      "make": "Suzuki",
+      "variants": [
+        "VXL AGS",
+        "VXR"
+      ],
+      "default_engine_cc": 660,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2019,
+      "max_year": 2024,
+      "avg_price_lacs": 22.94
+    },
+    "Cuore": {
+      "make": "Daihatsu",
+      "variants": [
+        "CX Eco"
+      ],
+      "default_engine_cc": 800,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2004,
+      "max_year": 2012,
+      "avg_price_lacs": 4.98
+    },
+    "Karvaan": {
+      "make": "Changan",
+      "variants": [
+        "Plus"
+      ],
+      "default_engine_cc": 1000,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2018,
+      "max_year": 2024,
+      "avg_price_lacs": 22.56
+    },
+    "Sportage": {
+      "make": "KIA",
+      "variants": [
+        "AWD",
+        "FWD"
+      ],
+      "default_engine_cc": 2000,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2019,
+      "max_year": 2024,
+      "avg_price_lacs": 61.54
+    },
+    "Mehran": {
+      "make": "Suzuki",
+      "variants": [
+        "VXR"
+      ],
+      "default_engine_cc": 800,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2006,
+      "max_year": 2019,
+      "avg_price_lacs": 5.54
+    },
+    "Yaris": {
+      "make": "Toyota",
+      "variants": [
+        "ATIV 1.3 CVT",
+        "ATIV X 1.5 CVT"
+      ],
+      "default_engine_cc": 1300,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2020,
+      "max_year": 2024,
+      "avg_price_lacs": 42.15
+    },
+    "Swift": {
+      "make": "Suzuki",
+      "variants": [
+        "GLX CVT"
+      ],
+      "default_engine_cc": 1200,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2022,
+      "max_year": 2024,
+      "avg_price_lacs": 41.56
+    },
+    "Prius": {
+      "make": "Toyota",
+      "variants": [
+        "1.8 S"
+      ],
+      "default_engine_cc": 1800,
+      "default_transmission": "Automatic",
+      "default_fuel": "Hybrid",
+      "min_year": 2012,
+      "max_year": 2021,
+      "avg_price_lacs": 32.13
+    },
+    "Elantra": {
+      "make": "Hyundai",
+      "variants": [
+        "GLS 2.0"
+      ],
+      "default_engine_cc": 2000,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2021,
+      "max_year": 2024,
+      "avg_price_lacs": 58.13
+    },
+    "Vitz": {
+      "make": "Toyota",
+      "variants": [
+        "F 1.0"
+      ],
+      "default_engine_cc": 1000,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2012,
+      "max_year": 2020,
+      "avg_price_lacs": 18.52
+    },
+    "Civic": {
+      "make": "Honda",
+      "variants": [
+        "1.8 i-VTEC Oriel (X)",
+        "Oriel 1.5 Turbo (11th Gen)",
+        "RS Turbo 1.5",
+        "Rebirth 1.8 VTi Oriel",
+        "Reborn 1.8 Prosmatec"
+      ],
+      "default_engine_cc": 1800,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2006,
+      "max_year": 2024,
+      "avg_price_lacs": 40.13
+    },
+    "Every": {
+      "make": "Suzuki",
+      "variants": [
+        "PA / Join"
+      ],
+      "default_engine_cc": 660,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2015,
+      "max_year": 2023,
+      "avg_price_lacs": 18.14
+    },
+    "Picanto": {
+      "make": "KIA",
+      "variants": [
+        "Automatic"
+      ],
+      "default_engine_cc": 1000,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2019,
+      "max_year": 2024,
+      "avg_price_lacs": 28.73
+    },
+    "Prado": {
+      "make": "Toyota",
+      "variants": [
+        "TX 2.7"
+      ],
+      "default_engine_cc": 2700,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2008,
+      "max_year": 2020,
+      "avg_price_lacs": 146.2
+    },
+    "Dayz": {
+      "make": "Nissan",
+      "variants": [
+        "Highway Star"
+      ],
+      "default_engine_cc": 660,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2014,
+      "max_year": 2022,
+      "avg_price_lacs": 18.38
+    },
+    "Cultus (Old)": {
+      "make": "Suzuki",
+      "variants": [
+        "Euro II"
+      ],
+      "default_engine_cc": 1000,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2008,
+      "max_year": 2016,
+      "avg_price_lacs": 8.15
+    },
+    "HS": {
+      "make": "MG",
+      "variants": [
+        "Exclusive 1.5 Turbo"
+      ],
+      "default_engine_cc": 1500,
+      "default_transmission": "Automatic",
+      "default_fuel": "Petrol",
+      "min_year": 2020,
+      "max_year": 2024,
+      "avg_price_lacs": 58.8
+    },
+    "Swift (Old)": {
+      "make": "Suzuki",
+      "variants": [
+        "DLX 1.3"
+      ],
+      "default_engine_cc": 1300,
+      "default_transmission": "Manual",
+      "default_fuel": "Petrol",
+      "min_year": 2011,
+      "max_year": 2021,
+      "avg_price_lacs": 15.0
+    },
+    "Vezel": {
+      "make": "Honda",
+      "variants": [
+        "Hybrid Z"
+      ],
+      "default_engine_cc": 1500,
+      "default_transmission": "Automatic",
+      "default_fuel": "Hybrid",
+      "min_year": 2014,
+      "max_year": 2020,
+      "avg_price_lacs": 31.63
+    }
+  },
+  "cities": [
+    "Faisalabad",
+    "Gujranwala",
+    "Islamabad",
+    "Karachi",
+    "Lahore",
+    "Multan",
+    "Peshawar",
+    "Rawalpindi",
+    "Sialkot",
+    "Unregistered"
+  ],
+  "transmissions": [
+    "Automatic",
+    "Manual"
+  ],
+  "fuel_types": [
+    "Diesel",
+    "Hybrid",
+    "Petrol"
+  ],
+  "min_year": 2004,
+  "max_year": 2024,
+  "piece_names": [
+    "bonnet",
+    "roof",
+    "trunk",
+    "front_left_door",
+    "front_right_door",
+    "rear_left_door",
+    "rear_right_door",
+    "front_left_fender",
+    "front_right_fender",
+    "rear_left_fender",
+    "rear_right_fender"
+  ],
+  "piece_conditions": [
+    {
+      "id": "genuine",
+      "label": "Genuine (Original Paint)",
+      "color": "#10b981"
+    },
+    {
+      "id": "touchup_no_putty",
+      "label": "Touchup / Shower (No Poteen)",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "putty",
+      "label": "Repainted With Poteen / Putty",
+      "color": "#ef4444"
+    },
+    {
+      "id": "replaced",
+      "label": "Replaced / Changed Piece",
+      "color": "#8b5cf6"
+    }
+  ]
+}

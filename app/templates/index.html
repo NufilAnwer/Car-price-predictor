@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PakValuate Pro — Pakistan Used Car Valuation AI (PakWheels & OLX)</title>
+  <meta name="description" content="Kelley Blue Book-grade AI Used Car Valuation Platform for Pakistan. Calibrated with real PakWheels & OLX Pakistan market data with 15-panel paint, touchup, and poteen inspection analysis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="apple-dark">
+  <!-- Dynamic Island Notification Pill -->
+  <aside class="dynamic-island-container" id="dynamic-island" aria-live="polite">
+    <div class="dynamic-island-pill">
+      <div class="di-icon-wrap" id="di-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <div class="di-text-content">
+        <span class="di-title" id="di-title">PakValuate Pro Ready</span>
+        <span class="di-desc" id="di-desc">Connected to PakWheels & OLX Live Feeds</span>
+      </div>
+      <div class="di-badge" id="di-badge">Live</div>
+    </div>
+  </aside>
+
+  <!-- Ambient Glow Atmosphere -->
+  <div class="ambient-glow-wrap" aria-hidden="true">
+    <div class="glow-orb orb-primary" id="ambient-orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-emerald"></div>
+  </div>
+
+  <!-- Apple Translucent Global Navigation -->
+  <header class="apple-nav">
+    <div class="nav-content">
+      <div class="nav-brand">
+        <!-- Iconic Apple Glyph -->
+        <svg class="apple-glyph" viewBox="0 0 170 170" width="18" height="18" fill="currentColor">
+          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.74 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.81-11.96-14.34-6.3-9.68-11.26-20.73-14.88-33.15-3.62-12.42-5.43-24.16-5.43-35.22 0-14.73 3.65-27.02 10.96-36.87 7.31-9.85 16.59-14.84 27.84-14.97 4.93 0 10.37 1.34 16.32 4.02 5.95 2.68 9.94 4.08 11.96 4.2 1.8.12 5.86-1.29 12.18-4.24 6.32-2.95 11.83-4.31 16.53-4.08 12.87.64 23.09 5.37 30.67 14.18-11.09 6.74-16.52 16.14-16.3 28.2.22 9.53 3.87 17.56 10.96 24.08 7.08 6.52 15.49 10.15 25.22 10.89-2.22 6.74-4.8 13.25-7.74 19.53zM119.22 31.84c0-7.39 2.64-14.42 7.92-21.09 5.28-6.67 11.91-10.75 19.89-12.25.23 1.25.35 2.4.35 3.45 0 7.39-2.73 14.54-8.19 21.46-5.46 6.92-12.07 10.91-19.83 11.97-.08-1.16-.14-2.34-.14-3.54z"/>
+        </svg>
+        <span class="brand-text">PakValuate <span class="pro-tag">PRO</span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="#keynote-hero" class="nav-link active">Overview</a>
+        <a href="#wizard-section" class="nav-link">10-Step Wizard</a>
+        <a href="#valuation-engine" class="nav-link">Studio</a>
+        <a href="#inspector-section" class="nav-link">15-Panel Map</a>
+        <a href="#live-marketplace" class="nav-link">Live Classifieds</a>
+        <a href="#compare-section" class="nav-link">Compare</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="live-indicator">
+          <span class="pulse-dot"></span>
+          <span class="indicator-text">361 Verified Ads</span>
+        </div>
+        <a href="#wizard-section" class="apple-btn-sm">Value My Car</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Apple Secondary Sticky Product Subnav -->
+  <aside class="apple-subnav" id="apple-subnav">
+    <div class="subnav-container">
+      <div class="subnav-left">
+        <span class="subnav-model" id="subnav-model-title">Toyota Corolla Altis 1.6</span>
+        <span class="subnav-sep">•</span>
+        <span class="subnav-year-city" id="subnav-meta">2021 • Islamabad Registered</span>
+      </div>
+      <div class="subnav-right">
+        <div class="subnav-price-tag">
+          <span class="subnav-price-label">Fair Value:</span>
+          <strong class="subnav-price-val" id="subnav-price">Rs 38.10 Lacs</strong>
+        </div>
+        <a href="#wizard-section" class="apple-subnav-btn">10-Step Report</a>
+        <a href="#valuation-engine" class="apple-subnav-btn-primary">Studio</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Hero Section (Apple Keynote Product Launch Style) -->
+  <section class="hero-section" id="keynote-hero">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-icon">🇵🇰</span>
+        <span>PakWheels & OLX Pakistan Live Valuation Intelligence</span>
+      </div>
+      <h1 class="hero-headline">
+        Know What Your Car Is Really Worth.<br>
+        <span class="headline-gradient">Explainable AI. Down to the micron.</span>
+      </h1>
+      <p class="hero-subhead">
+        Get an AI-powered market valuation based on your car's model, mileage, condition, history, location and 15-panel body-part condition. Calibrated with real-time transactions from PakWheels.com and OLX.com.pk.
+      </p>
+
+      <!-- Apple Action Links -->
+      <div class="hero-cta-group">
+        <a href="#wizard-section" class="apple-btn-hero-primary" id="cta-value-my-car">
+          <span>Value My Car (10 Steps)</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#valuation-engine" class="apple-btn-hero-secondary">
+          <span>Quick Estimate Studio</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </a>
+        <a href="#compare-section" class="apple-btn-hero-secondary">
+          <span>Compare Cars</span>
+        </a>
+        <a href="#live-marketplace" class="apple-btn-hero-secondary">
+          <span>360+ Live Ads</span>
+        </a>
+      </div>
+
+      <!-- Quick Valuation Bar (Instant Appraisal Form) -->
+      <div class="hero-quick-val-bar" id="hero-quick-bar">
+        <div class="quick-val-header">
+          <span class="quick-val-title">⚡ Quick 30-Second Valuation</span>
+          <span class="quick-val-sub">Instant Pakistani Market Appraisal</span>
+        </div>
+        <form class="quick-val-form" id="quick-val-form" onsubmit="event.preventDefault();">
+          <div class="quick-field">
+            <label for="quick-make">Make</label>
+            <select id="quick-make" class="quick-select"></select>
+          </div>
+          <div class="quick-field">
+            <label for="quick-model">Model</label>
+            <select id="quick-model" class="quick-select"></select>
+          </div>
+          <div class="quick-field">
+            <label for="quick-year">Year</label>
+            <select id="quick-year" class="quick-select"></select>
+          </div>
+          <div class="quick-field">
+            <label for="quick-mileage">Mileage (km)</label>
+            <input type="number" id="quick-mileage" value="45000" step="5000" class="quick-input">
+          </div>
+          <div class="quick-field">
+            <label for="quick-city">City</label>
+            <select id="quick-city" class="quick-select"></select>
+          </div>
+          <button type="button" id="btn-quick-estimate" class="quick-submit-btn">
+            <span>Estimate Price</span>
+          </button>
+        </form>
+        <div id="quick-result-pill" class="quick-result-pill" style="display: none;">
+          <span class="qr-label">Estimated Fair Market Value:</span>
+          <strong class="qr-val" id="quick-fair-val">Rs 41.80 Lacs</strong>
+          <span class="qr-range" id="quick-range-val">(Rs 40.50L – Rs 43.50L)</span>
+          <a href="#wizard-section" class="qr-link">Full Condition Breakdown &rarr;</a>
+        </div>
+      </div>
+
+      <!-- How It Works Section (4 Steps) -->
+      <div class="how-it-works-strip">
+        <div class="hiw-step">
+          <div class="hiw-num">1</div>
+          <div class="hiw-content">
+            <h4>Tell us about your car</h4>
+            <p>Make, model, variant, year & mileage</p>
+          </div>
+        </div>
+        <div class="hiw-arrow">&rarr;</div>
+        <div class="hiw-step">
+          <div class="hiw-num">2</div>
+          <div class="hiw-content">
+            <h4>Describe its condition</h4>
+            <p>15-panel paint, touchup, seals & history</p>
+          </div>
+        </div>
+        <div class="hiw-arrow">&rarr;</div>
+        <div class="hiw-step">
+          <div class="hiw-num">3</div>
+          <div class="hiw-content">
+            <h4>Our AI analyzes the market</h4>
+            <p>PakWheels & OLX comps + XGBoost model</p>
+          </div>
+        </div>
+        <div class="hiw-arrow">&rarr;</div>
+        <div class="hiw-step">
+          <div class="hiw-num">4</div>
+          <div class="hiw-content">
+            <h4>Get your certified value</h4>
+            <p>Fair market value, SHAP explainability & PDF</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keynote Highlights Grid -->
+      <div class="hero-stats-strip">
+        <div class="hero-stat-item">
+          <span class="stat-number">64,800+</span>
+          <span class="stat-label">Market Listings Indexed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="stat-number">361 Live</span>
+          <span class="stat-label">Verified PakWheels & OLX Ads</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="stat-number">15 Panels</span>
+          <span class="stat-label">Paint & Poteen Body Audit</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat-item">
+          <span class="stat-number">0.993</span>
+          <span class="stat-label">XGBoost ML R² Accuracy</span>
+        </div>
+      </div>
+
+      <!-- Apple Keynote Visual Stage: Car Showcase & Finish Configurator -->
+      <div class="keynote-visual-stage">
+        <div class="stage-frame">
+          <img src="/static/images/apple_car_keynote.jpg" alt="Apple Keynote Vehicle Presentation" class="keynote-image" id="keynote-car-img" loading="eager">
+          <div class="stage-overlay"></div>
+          
+          <!-- Interactive Colorway Swatches (Apple Finish Selector) -->
+          <div class="colorway-shelf">
+            <span class="colorway-label">Available Market Finishes:</span>
+            <div class="colorway-swatches" role="radiogroup" aria-label="Car Color Finishes">
+              <button type="button" class="swatch-btn active" data-color="titanium" data-glow="#2997ff" title="Titanium Silver">
+                <span class="swatch-circle finish-titanium"></span>
+                <span class="swatch-tooltip">Titanium Silver</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="attitude-black" data-glow="#515154" title="Attitude Black Mica">
+                <span class="swatch-circle finish-black"></span>
+                <span class="swatch-tooltip">Attitude Black</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="pearl-white" data-glow="#ffffff" title="Super White 040">
+                <span class="swatch-circle finish-white"></span>
+                <span class="swatch-tooltip">Pearl White</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="royal-blue" data-glow="#0071e3" title="Royal Dark Blue">
+                <span class="swatch-circle finish-blue"></span>
+                <span class="swatch-tooltip">Royal Blue</span>
+              </button>
+              <button type="button" class="swatch-btn" data-color="graphite-grey" data-glow="#86868b" title="Gun Metallic Grey">
+                <span class="swatch-circle finish-grey"></span>
+                <span class="swatch-tooltip">Gun Metallic</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SIGNATURE 10-STEP PROGRESSIVE VALUATION WIZARD (KELLEY BLUE BOOK STYLE)
+       ========================================================================= -->
+  <section class="wizard-section" id="wizard-section">
+    <div class="wizard-container">
+      <div class="section-header-apple">
+        <div class="hero-badge">
+          <span class="badge-icon">📋</span>
+          <span>Comprehensive Inspection & Pricing Engine</span>
+        </div>
+        <h2 class="section-headline">
+          10-Step Vehicle Valuation Wizard.<br>
+          <span class="headline-gradient">Condition-Aware. Explainable. Certified.</span>
+        </h2>
+        <p class="section-subhead">
+          Tell us what this used car is actually worth and explain <strong>WHY</strong>. We audit 15 body panels, mileage deviation against Pakistani averages, service records, accident severity, and location.
+        </p>
+      </div>
+
+      <!-- Multi-Step Stepper Navigation Ribbon -->
+      <div class="wizard-stepper-ribbon">
+        <div class="stepper-progress-bar">
+          <div class="stepper-progress-fill" id="wizard-progress-fill" style="width: 10%;"></div>
+        </div>
+        <div class="stepper-steps-row" id="stepper-steps-row">
+          <button type="button" class="step-pill active" data-step="1">
+            <span class="step-num">01</span>
+            <span class="step-label">Specs</span>
+          </button>
+          <button type="button" class="step-pill" data-step="2">
+            <span class="step-num">02</span>
+            <span class="step-label">Mileage</span>
+          </button>
+          <button type="button" class="step-pill" data-step="3">
+            <span class="step-num">03</span>
+            <span class="step-label">Ownership</span>
+          </button>
+          <button type="button" class="step-pill" data-step="4">
+            <span class="step-num">04</span>
+            <span class="step-label">Accidents</span>
+          </button>
+          <button type="button" class="step-pill" data-step="5">
+            <span class="step-num">05</span>
+            <span class="step-label">15-Panel Map</span>
+          </button>
+          <button type="button" class="step-pill" data-step="6">
+            <span class="step-num">06</span>
+            <span class="step-label">Condition</span>
+          </button>
+          <button type="button" class="step-pill" data-step="7">
+            <span class="step-num">07</span>
+            <span class="step-label">Features</span>
+          </button>
+          <button type="button" class="step-pill" data-step="8">
+            <span class="step-num">08</span>
+            <span class="step-label">Photos & AI</span>
+          </button>
+          <button type="button" class="step-pill" data-step="9">
+            <span class="step-num">09</span>
+            <span class="step-label">Buyer / Seller</span>
+          </button>
+          <button type="button" class="step-pill" data-step="10">
+            <span class="step-num">10</span>
+            <span class="step-label">Report</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Wizard Step Card Container -->
+      <div class="wizard-card-wrapper">
+
+        <!-- STEP 1: Vehicle Details -->
+        <div class="wizard-step-pane active" id="wizard-step-1">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 1 of 10</span>
+            <h3>Vehicle Identification & Specifications</h3>
+            <p>Select your vehicle make, model, variant, and factory technical configuration.</p>
+          </div>
+          <div class="step-fields-grid">
+            <div class="apple-input-group">
+              <label for="w-make">Make / Manufacturer</label>
+              <div class="select-container">
+                <select id="w-make"></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            <div class="apple-input-group">
+              <label for="w-model">Model</label>
+              <div class="select-container">
+                <select id="w-model"></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            <div class="apple-input-group col-span-2">
+              <label for="w-variant">Variant / Trim</label>
+              <div class="select-container">
+                <select id="w-variant"></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            <div class="apple-input-group">
+              <label for="w-year">Model Year</label>
+              <input type="number" id="w-year" min="2005" max="2024" value="2021" class="apple-text-field">
+            </div>
+            <div class="apple-input-group">
+              <label for="w-reg-year">Registration Year</label>
+              <input type="number" id="w-reg-year" min="2005" max="2024" value="2021" class="apple-text-field">
+            </div>
+            <div class="apple-input-group">
+              <label for="w-transmission">Transmission</label>
+              <div class="select-container">
+                <select id="w-transmission">
+                  <option value="Automatic" selected>Automatic</option>
+                  <option value="Manual">Manual</option>
+                  <option value="CVT">CVT</option>
+                  <option value="DCT">DCT / Dual Clutch</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            <div class="apple-input-group">
+              <label for="w-fuel">Fuel Type</label>
+              <div class="select-container">
+                <select id="w-fuel">
+                  <option value="Petrol" selected>Petrol</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="Electric">Electric</option>
+                  <option value="CNG">CNG</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            <div class="apple-input-group">
+              <label for="w-engine-cc">Engine Capacity (cc)</label>
+              <input type="number" id="w-engine-cc" value="1600" min="600" max="6000" class="apple-text-field">
+            </div>
+            <div class="apple-input-group">
+              <label for="w-city">Registered City</label>
+              <div class="select-container">
+                <select id="w-city"></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+          </div>
+          <div class="step-nav-actions">
+            <div></div>
+            <button type="button" class="btn-step-next" onclick="goToStep(2)">
+              <span>Next: Mileage & Usage</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Mileage & Usage Analysis -->
+        <div class="wizard-step-pane" id="wizard-step-2">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 2 of 10</span>
+            <h3>Mileage Analysis & Usage Assessment</h3>
+            <p>We analyze annual mileage relative to the vehicle's age against Pakistani averages (~14,500 km/year).</p>
+          </div>
+          <div class="mileage-analysis-container">
+            <div class="mileage-input-row">
+              <div class="mileage-card-box">
+                <label for="w-mileage">Odometer Reading (Total Kilometers)</label>
+                <div class="big-input-wrap">
+                  <input type="number" id="w-mileage" min="1000" max="300000" step="1000" value="45000" class="big-odometer-input">
+                  <span class="unit-km">km</span>
+                </div>
+                <input type="range" id="w-mileage-slider" min="1000" max="250000" step="1000" value="45000" class="apple-slider">
+              </div>
+
+              <!-- Live Mileage Gauge & Diagnostics -->
+              <div class="mileage-stats-dashboard">
+                <div class="m-diag-item">
+                  <span class="diag-title">Vehicle Age</span>
+                  <strong class="diag-val" id="diag-age">5.0 Years</strong>
+                </div>
+                <div class="m-diag-item">
+                  <span class="diag-title">Annual Usage</span>
+                  <strong class="diag-val" id="diag-annual-km">9,000 km / year</strong>
+                </div>
+                <div class="m-diag-item">
+                  <span class="diag-title">Pakistani Market Avg</span>
+                  <strong class="diag-val">14,500 km / year</strong>
+                </div>
+                <div class="m-diag-item">
+                  <span class="diag-title">Mileage Health Score</span>
+                  <div class="score-pill green" id="diag-mileage-score">88/100</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Factual Mileage Assessment Banner -->
+            <div class="mileage-assessment-banner" id="mileage-assessment-banner">
+              <div class="mab-icon">📊</div>
+              <div class="mab-text">
+                <strong id="mab-headline">Below-Average Mileage for its age</strong>
+                <p id="mab-desc">Well preserved with lower mechanical wear. Commands verified premium in resale.</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(1)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(3)">
+              <span>Next: Ownership History</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Ownership History -->
+        <div class="wizard-step-pane" id="wizard-step-3">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 3 of 10</span>
+            <h3>Ownership History & Documentation</h3>
+            <p>Single-owner vehicles with dealership service logbooks command superior value and resale liquidity in Pakistan.</p>
+          </div>
+          <div class="step-fields-grid">
+            <div class="apple-input-group">
+              <label for="w-owners">Number of Previous Owners</label>
+              <div class="select-container">
+                <select id="w-owners">
+                  <option value="1" selected>1 (Single Owner - First Hand)</option>
+                  <option value="2">2 (Second Owner)</option>
+                  <option value="3">3 (Third Owner)</option>
+                  <option value="4">4+ Owners</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-service-history">Documented Service History</label>
+              <div class="select-container">
+                <select id="w-service-history">
+                  <option value="complete" selected>Complete Authorized Logbook & Invoices</option>
+                  <option value="partial">Partial Service Invoices Available</option>
+                  <option value="none">Unavailable / Routine Oil Change Only</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-dealership">Authorized 3S Dealership Servicing?</label>
+              <div class="select-container">
+                <select id="w-dealership">
+                  <option value="yes" selected>Yes, 100% Dealership Maintained (Toyota/Honda/Suzuki)</option>
+                  <option value="partial">Partially (Dealership & Independent)</option>
+                  <option value="no">No, Local Workshops Only</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-usage-type">Vehicle Usage Type</label>
+              <div class="select-container">
+                <select id="w-commercial">
+                  <option value="0" selected>Personal / Private Family Vehicle</option>
+                  <option value="1">Commercial / Fleet / Ride-Hailing (Uber/Indrive)</option>
+                  <option value="2">Company Maintained Official Car</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ownership-score-card">
+            <div class="osc-icon">🛡️</div>
+            <div class="osc-content">
+              <span>Vehicle History Confidence Score:</span>
+              <strong id="w-history-score-display">95 / 100</strong>
+              <p>Single owner with dealership records gives buyers high confidence and reduces inspection friction.</p>
+            </div>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(2)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(4)">
+              <span>Next: Accident & Structural</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Accident & Structural History -->
+        <div class="wizard-step-pane" id="wizard-step-4">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 4 of 10</span>
+            <h3>Accident & Structural Integrity</h3>
+            <p>Differentiating cosmetic fender benders from critical chassis, inner apron, and airbag deployments.</p>
+          </div>
+          <div class="step-fields-grid">
+            <div class="apple-input-group col-span-2">
+              <label for="w-accident-history">Reported Accident History</label>
+              <div class="select-container">
+                <select id="w-accident-history">
+                  <option value="none" selected>No Known Accident (Clean History)</option>
+                  <option value="minor">Minor Fender Bender (Cosmetic bumper/fender touchup)</option>
+                  <option value="moderate">Moderate Collision (Panel replaced, core chassis intact)</option>
+                  <option value="major">Major Accident (Structural repairs reported)</option>
+                  <option value="structural">Structural Frame / Roll-Over Damage</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ios-toggles-grid" style="margin-top: 16px;">
+            <label class="ios-toggle-card">
+              <div class="toggle-info">
+                <div class="toggle-icon-wrap">🔒</div>
+                <div>
+                  <span class="toggle-heading">Factory Inner Seam Seals Intact & Pack</span>
+                  <span class="toggle-sub">Inner pillar, door edge, and trunk seals 100% genuine</span>
+                </div>
+              </div>
+              <div class="ios-switch">
+                <input type="checkbox" id="w-seals-intact" checked>
+                <span class="ios-slider"></span>
+              </div>
+            </label>
+
+            <label class="ios-toggle-card">
+              <div class="toggle-info">
+                <div class="toggle-icon-wrap">🛡️</div>
+                <div>
+                  <span class="toggle-heading">Airbags Deployed?</span>
+                  <span class="toggle-sub">Driver or passenger SRS airbags ever deployed</span>
+                </div>
+              </div>
+              <div class="ios-switch">
+                <input type="checkbox" id="w-airbags">
+                <span class="ios-slider"></span>
+              </div>
+            </label>
+
+            <label class="ios-toggle-card">
+              <div class="toggle-info">
+                <div class="toggle-icon-wrap">🔩</div>
+                <div>
+                  <span class="toggle-heading">Chassis / Frame Rail Hit</span>
+                  <span class="toggle-sub">Straightening or welding on main longitudinal chassis</span>
+                </div>
+              </div>
+              <div class="ios-switch">
+                <input type="checkbox" id="w-chassis">
+                <span class="ios-slider"></span>
+              </div>
+            </label>
+
+            <label class="ios-toggle-card">
+              <div class="toggle-info">
+                <div class="toggle-icon-wrap">🚗</div>
+                <div>
+                  <span class="toggle-heading">Radiator Core Support Replaced</span>
+                  <span class="toggle-sub">Front radiator frame crossmember bent or replaced</span>
+                </div>
+              </div>
+              <div class="ios-switch">
+                <input type="checkbox" id="w-radiator">
+                <span class="ios-slider"></span>
+              </div>
+            </label>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(3)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(5)">
+              <span>Next: Interactive 15-Panel Map</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 5: Interactive 15-Panel Body Condition Map (SIGNATURE FEATURE) -->
+        <div class="wizard-step-pane" id="wizard-step-5">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 5 of 10</span>
+            <h3>Interactive 15-Panel Body Condition Map</h3>
+            <p>Click any body piece to mark genuine paint, cosmetic touchup, poteen (putty) layer, or replaced panels.</p>
+          </div>
+
+          <!-- Presets -->
+          <div class="segmented-control-container">
+            <span class="segmented-label">Condition Presets:</span>
+            <div class="segmented-control" role="tablist">
+              <button type="button" class="segment-btn active" data-preset="total_genuine">🌟 100% Total Genuine</button>
+              <button type="button" class="segment-btn" data-preset="minor_touchup">🚗 2-3 Touchups</button>
+              <button type="button" class="segment-btn" data-preset="showered_sides">✨ Showered Sides</button>
+              <button type="button" class="segment-btn" data-preset="heavy_putty">⚠️ With Poteen</button>
+            </div>
+          </div>
+
+          <!-- Color Legend -->
+          <div class="apple-legend">
+            <div class="legend-badge status-genuine"><span class="color-dot genuine"></span><span>Genuine (80-120µm)</span></div>
+            <div class="legend-badge status-touchup"><span class="color-dot touchup"></span><span>Touchup (130-180µm)</span></div>
+            <div class="legend-badge status-putty"><span class="color-dot putty"></span><span>Poteen (>250µm)</span></div>
+            <div class="legend-badge status-replaced"><span class="color-dot replaced"></span><span>Replaced OEM/Kabli</span></div>
+          </div>
+
+          <!-- CAD Vehicle Body Schematic (15 Panels) -->
+          <div class="cad-schematic-wrap">
+            <div class="cad-blueprint-backdrop" style="background-image: url('/static/images/apple_car_chassis_cad.jpg');"></div>
+            <div class="cad-grid-bg"></div>
+
+            <div class="chassis-container">
+              <!-- Front Bumper & Aprons Strip -->
+              <div class="chassis-row row-bumpers">
+                <button type="button" class="cad-panel bumper-panel" data-piece="front_bumper" id="btn-front_bumper">
+                  <span class="panel-name">Front Bumper</span>
+                  <span class="panel-microns" id="microns-front_bumper">Plastic / Paint</span>
+                  <span class="panel-badge genuine" id="badge-front_bumper">Genuine</span>
+                </button>
+              </div>
+
+              <!-- Inner Aprons (Critical Structural Component) -->
+              <div class="chassis-row row-aprons">
+                <button type="button" class="cad-panel apron-panel" data-piece="left_apron" id="btn-left_apron">
+                  <span class="panel-name">Left Inner Apron</span>
+                  <span class="panel-microns" id="microns-left_apron">Chassis Seal</span>
+                  <span class="panel-badge genuine" id="badge-left_apron">Genuine</span>
+                </button>
+                <div class="apron-spacer"><span>Front Engine Bay</span></div>
+                <button type="button" class="cad-panel apron-panel" data-piece="right_apron" id="btn-right_apron">
+                  <span class="panel-name">Right Inner Apron</span>
+                  <span class="panel-microns" id="microns-right_apron">Chassis Seal</span>
+                  <span class="panel-badge genuine" id="badge-right_apron">Genuine</span>
+                </button>
+              </div>
+
+              <!-- Front Row (Fenders & Bonnet) -->
+              <div class="chassis-row row-front">
+                <button type="button" class="cad-panel side-panel" data-piece="front_left_fender" id="btn-front_left_fender">
+                  <span class="panel-name">Front L Fender</span>
+                  <span class="panel-microns" id="microns-front_left_fender">95 µm</span>
+                  <span class="panel-badge genuine" id="badge-front_left_fender">Genuine</span>
+                </button>
+
+                <button type="button" class="cad-panel hood-panel" data-piece="bonnet" id="btn-bonnet">
+                  <div class="cad-icon">🚘</div>
+                  <span class="panel-name">Bonnet (Hood)</span>
+                  <span class="panel-microns" id="microns-bonnet">105 µm</span>
+                  <span class="panel-badge genuine" id="badge-bonnet">Genuine</span>
+                </button>
+
+                <button type="button" class="cad-panel side-panel" data-piece="front_right_fender" id="btn-front_right_fender">
+                  <span class="panel-name">Front R Fender</span>
+                  <span class="panel-microns" id="microns-front_right_fender">98 µm</span>
+                  <span class="panel-badge genuine" id="badge-front_right_fender">Genuine</span>
+                </button>
+              </div>
+
+              <!-- Cabin & Structural Roof -->
+              <div class="chassis-row row-cabin">
+                <div class="doors-column">
+                  <button type="button" class="cad-panel door-panel" data-piece="front_left_door" id="btn-front_left_door">
+                    <span class="panel-name">Driver Door (FL)</span>
+                    <span class="panel-microns" id="microns-front_left_door">100 µm</span>
+                    <span class="panel-badge genuine" id="badge-front_left_door">Genuine</span>
+                  </button>
+                  <button type="button" class="cad-panel door-panel" data-piece="rear_left_door" id="btn-rear_left_door">
+                    <span class="panel-name">Rear L Door</span>
+                    <span class="panel-microns" id="microns-rear_left_door">102 µm</span>
+                    <span class="panel-badge genuine" id="badge-rear_left_door">Genuine</span>
+                  </button>
+                </div>
+
+                <!-- Structural Roof (Critical in Pakistan) -->
+                <button type="button" class="cad-panel roof-panel" data-piece="roof" id="btn-roof">
+                  <div class="cad-icon">🛡️</div>
+                  <span class="panel-name">Roof (Chhat)</span>
+                  <span class="roof-sub">Structural Safety Core</span>
+                  <span class="panel-microns" id="microns-roof">90 µm</span>
+                  <span class="panel-badge genuine" id="badge-roof">Genuine</span>
+                </button>
+
+                <div class="doors-column">
+                  <button type="button" class="cad-panel door-panel" data-piece="front_right_door" id="btn-front_right_door">
+                    <span class="panel-name">Front R Door</span>
+                    <span class="panel-microns" id="microns-front_right_door">98 µm</span>
+                    <span class="panel-badge genuine" id="badge-front_right_door">Genuine</span>
+                  </button>
+                  <button type="button" class="cad-panel door-panel" data-piece="rear_right_door" id="btn-rear_right_door">
+                    <span class="panel-name">Rear R Door</span>
+                    <span class="panel-microns" id="microns-rear_right_door">101 µm</span>
+                    <span class="panel-badge genuine" id="badge-rear_right_door">Genuine</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Rear Quarters & Trunk -->
+              <div class="chassis-row row-rear">
+                <button type="button" class="cad-panel side-panel" data-piece="rear_left_fender" id="btn-rear_left_fender">
+                  <span class="panel-name">Rear L Quarter</span>
+                  <span class="panel-microns" id="microns-rear_left_fender">103 µm</span>
+                  <span class="panel-badge genuine" id="badge-rear_left_fender">Genuine</span>
+                </button>
+
+                <button type="button" class="cad-panel boot-panel" data-piece="trunk" id="btn-trunk">
+                  <div class="cad-icon">🧳</div>
+                  <span class="panel-name">Trunk / Boot (Diggi)</span>
+                  <span class="panel-microns" id="microns-trunk">96 µm</span>
+                  <span class="panel-badge genuine" id="badge-trunk">Genuine</span>
+                </button>
+
+                <button type="button" class="cad-panel side-panel" data-piece="rear_right_fender" id="btn-rear_right_fender">
+                  <span class="panel-name">Rear R Quarter</span>
+                  <span class="panel-microns" id="microns-rear_right_fender">102 µm</span>
+                  <span class="panel-badge genuine" id="badge-rear_right_fender">Genuine</span>
+                </button>
+              </div>
+
+              <!-- Rear Bumper -->
+              <div class="chassis-row row-bumpers">
+                <button type="button" class="cad-panel bumper-panel" data-piece="rear_bumper" id="btn-rear_bumper">
+                  <span class="panel-name">Rear Bumper</span>
+                  <span class="panel-microns" id="microns-rear_bumper">Plastic / Paint</span>
+                  <span class="panel-badge genuine" id="badge-rear_bumper">Genuine</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live 4-Mini Stats Tally -->
+          <div class="apple-stats-grid" style="margin-top: 16px;">
+            <div class="stat-pill"><span class="stat-pill-num genuine-color" id="stat-genuine-count">15</span><span class="stat-pill-label">Total Genuine</span></div>
+            <div class="stat-pill"><span class="stat-pill-num touchup-color" id="stat-touchup-count">0</span><span class="stat-pill-label">Touchups</span></div>
+            <div class="stat-pill"><span class="stat-pill-num putty-color" id="stat-putty-count">0</span><span class="stat-pill-label">With Poteen</span></div>
+            <div class="stat-pill"><span class="stat-pill-num replaced-color" id="stat-replaced-count">0</span><span class="stat-pill-label">Replaced</span></div>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(4)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(6)">
+              <span>Next: Interior & Mechanical</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 6: Interior & Mechanical Health -->
+        <div class="wizard-step-pane" id="wizard-step-6">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 6 of 10</span>
+            <h3>Interior & Mechanical Condition</h3>
+            <p>Assessment of mechanical powertrain, cabin upholstery, air conditioning, and tyre tread life.</p>
+          </div>
+          <div class="step-fields-grid">
+            <div class="apple-input-group">
+              <label for="w-engine-cond">Engine Performance & Compression</label>
+              <select id="w-engine-cond" class="apple-select-box">
+                <option value="excellent" selected>Excellent (Quiet, No Blow / Smoke, Sealed)</option>
+                <option value="good">Good (Normal minor wear, Good Pickup)</option>
+                <option value="average">Average (Minor oil sweating / Lifter tick)</option>
+                <option value="poor">Needs Overhaul / Smoke Detected</option>
+              </select>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-trans-cond">Gearbox & Transmission</label>
+              <select id="w-trans-cond" class="apple-select-box">
+                <option value="excellent" selected>Excellent (Smooth Shifting, Jerk-Free)</option>
+                <option value="good">Good (Normal Shifting)</option>
+                <option value="average">Minor Delay / Clutch Wear</option>
+                <option value="poor">Slipping / Jerking on Reverse</option>
+              </select>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-ac-cond">Air Conditioning & Climate</label>
+              <select id="w-ac-cond" class="apple-select-box">
+                <option value="excellent" selected>Chilled (Compressor, Condenser & Heater 100%)</option>
+                <option value="good">Good Cooling</option>
+                <option value="average">Requires Gas Top-up / Service</option>
+                <option value="poor">Compressor Faulty / Inoperative</option>
+              </select>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-susp-cond">Suspension & Steering</label>
+              <select id="w-susp-cond" class="apple-select-box">
+                <option value="excellent" selected>Soundless (New Bushings, Firm Struts)</option>
+                <option value="good">Good (Minor sound on rough roads)</option>
+                <option value="average">Work Required on Steering End / Ball Joints</option>
+                <option value="poor">Weak Shocks & Excessive Bushing Play</option>
+              </select>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-interior-cond">Interior Upholstery & Dashboard</label>
+              <select id="w-interior-cond" class="apple-select-box">
+                <option value="excellent" selected>Immaculate (Clean Fabric/Leather, No Cracks)</option>
+                <option value="good">Clean (Minor routine wear)</option>
+                <option value="average">Average (Stains or steering wheel wear)</option>
+                <option value="poor">Worn Out / Broken AC Vents</option>
+              </select>
+            </div>
+
+            <div class="apple-input-group">
+              <label for="w-tyre-cond">Tyre Health & Tread Depth</label>
+              <select id="w-tyre-cond" class="apple-select-box">
+                <option value="excellent" selected>New / Excellent (80% - 100% Tread Remaining)</option>
+                <option value="good">Good Condition (60% - 80% Tread Remaining)</option>
+                <option value="average">Average (40% - 60% Tread Remaining)</option>
+                <option value="worn">Worn Out / Immediate Replacement Needed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(5)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(7)">
+              <span>Next: Features & Modifications</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 7: Factory Features & Modifications -->
+        <div class="wizard-step-pane" id="wizard-step-7">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 7 of 10</span>
+            <h3>Factory Features & Market Modifications</h3>
+            <p>Select factory equipment and aftermarket add-ons. (Note: Modifications do not automatically add linear value in Pakistan).</p>
+          </div>
+          
+          <div class="features-checklist-grid">
+            <label class="feature-item"><input type="checkbox" id="f-abs" checked><span>Anti-Lock Braking (ABS)</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-airbags" checked><span>Dual Front Airbags</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-sunroof"><span>Electric Sunroof / Moonroof</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-alloys" checked><span>Original Factory Alloy Rims</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-push-start" checked><span>Smart Key & Push Start</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-android" checked><span>Android Infotainment Panel</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-rear-cam" checked><span>Reverse Camera with Night Vision</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-leather"><span>Factory Leather Upholstery</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-climate"><span>Digital Climate Control</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-cruise"><span>Cruise Control</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-traction"><span>Vehicle Stability Assist (VSA)</span></label>
+            <label class="feature-item"><input type="checkbox" id="f-drl"><span>LED Headlamps & DRLs</span></label>
+          </div>
+
+          <div class="mods-section-box">
+            <h4>Aftermarket Modifications (Reported Factual Checklist)</h4>
+            <div class="mods-chips">
+              <label class="mod-chip"><input type="checkbox" id="m-rims"><span>Aftermarket Deep-Dish Alloys</span></label>
+              <label class="mod-chip"><input type="checkbox" id="m-sound"><span>Aftermarket Subwoofer / Amplifier</span></label>
+              <label class="mod-chip"><input type="checkbox" id="m-bodykit"><span>Aero Body Kit / Spoiler</span></label>
+              <label class="mod-chip"><input type="checkbox" id="m-exhaust"><span>Aftermarket Downpipe / Exhaust</span></label>
+              <label class="mod-chip"><input type="checkbox" id="m-tint"><span>Ceramic Heat-Rejection Window Film</span></label>
+            </div>
+            <p class="mods-helper-text">💡 Market Fact: Unaltered original stock cars sell 18% faster on PakWheels than heavily customized counterparts.</p>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(6)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(8)">
+              <span>Next: Photos & AI Inspection</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 8: Photo Upload & AI Visual Inspection -->
+        <div class="wizard-step-pane" id="wizard-step-8">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 8 of 10</span>
+            <h3>Photo Upload & AI Visual Inspection</h3>
+            <p>Upload vehicle exterior/interior photos for simulated computer-vision paint reflection and body gap checks.</p>
+          </div>
+
+          <div class="photo-upload-zone" id="photo-drop-zone">
+            <input type="file" id="car-photo-input" accept="image/*" style="display: none;">
+            <div class="upload-icon-circle">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+            </div>
+            <h4>Drag & drop car photos or click to browse</h4>
+            <p>Accepts JPG, PNG, WEBP (Max 10MB). Photos of front, side profile, and odometer recommended.</p>
+            <button type="button" class="apple-btn-secondary" onclick="document.getElementById('car-photo-input').click()">
+              Choose Vehicle Photo
+            </button>
+          </div>
+
+          <!-- AI Visual Assessment Response Banner -->
+          <div class="ai-visual-result-card" id="ai-photo-assessment" style="display: none;">
+            <div class="av-head">
+              <span class="av-badge">AI Visual Assessment (Estimate)</span>
+              <span class="av-conf" id="av-conf-badge">Confidence: 84%</span>
+            </div>
+            <div class="av-body">
+              <strong id="av-label">Likely Factory Original Paint (Clean Reflection Detected)</strong>
+              <p id="av-desc">Panel reflection shows uniform metallic flake distribution and clean panel gaps consistent with factory assembly.</p>
+              <small class="av-disclaimer">⚠️ AI visual assessment is an algorithmic estimate and should never replace a certified in-person physical inspection.</small>
+            </div>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(7)">Back</button>
+            <button type="button" class="btn-step-next" onclick="goToStep(9)">
+              <span>Next: Buyer vs. Seller Intent</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 9: Buyer vs. Seller Mode -->
+        <div class="wizard-step-pane" id="wizard-step-9">
+          <div class="step-pane-header">
+            <span class="step-badge">Step 9 of 10</span>
+            <h3>Select Mode: Are you Buying or Selling?</h3>
+            <p>We tailor the analysis: Buyer mode evaluates seller asking price; Seller mode recommends listing targets.</p>
+          </div>
+
+          <div class="mode-selector-grid">
+            <button type="button" class="mode-card-btn active" id="mode-seller-btn" onclick="selectAppMode('seller')">
+              <div class="mc-icon">🏷️</div>
+              <h4>I am Selling My Car</h4>
+              <p>Get suggested PakWheels listing price, expected negotiated price, and fast-cash liquidation target.</p>
+              <span class="mc-tag">Seller Strategy</span>
+            </button>
+
+            <button type="button" class="mode-card-btn" id="mode-buyer-btn" onclick="selectAppMode('buyer')">
+              <div class="mc-icon">🤝</div>
+              <h4>I am Looking to Buy This Car</h4>
+              <p>Enter the seller's asking price to calculate whether it is overpriced and generate negotiation leverage.</p>
+              <span class="mc-tag">Buyer Leverage</span>
+            </button>
+          </div>
+
+          <!-- Buyer Mode Asking Price Input (Visible when Buyer mode selected) -->
+          <div class="buyer-price-box" id="buyer-asking-box" style="display: none; margin-top: 20px;">
+            <label for="w-asking-price">Seller's Current Asking Price (PKR):</label>
+            <div class="big-input-wrap">
+              <span class="curr-prefix">Rs</span>
+              <input type="number" id="w-asking-price" value="4300000" step="50000" class="big-odometer-input">
+            </div>
+            <span class="helper-text">Enter the price listed in the classified ad or quoted by the dealership.</span>
+          </div>
+
+          <div class="step-nav-actions">
+            <button type="button" class="btn-step-prev" onclick="goToStep(8)">Back</button>
+            <button type="button" class="btn-step-next primary-calculate" id="btn-wizard-calculate" onclick="calculateFullValuation()">
+              <span>⚡ Generate Certified Valuation Report</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 10: Complete Valuation Report & Professional Certificate -->
+        <div class="wizard-step-pane" id="wizard-step-10">
+          <div class="step-pane-header print-hide">
+            <span class="step-badge">Step 10 of 10</span>
+            <h3>Certified Vehicle Valuation Certificate</h3>
+            <p>Official condition-adjusted appraisal calculated from verified PakWheels & OLX Pakistan market transactions.</p>
+          </div>
+
+          <!-- Printable Official Certificate Body -->
+          <div class="certificate-printable-wrapper" id="certificate-report">
+
+            <!-- Certificate Header Bar -->
+            <div class="cert-header">
+              <div class="cert-brand">
+                <span class="cert-logo-glyph">🇵🇰</span>
+                <div>
+                  <h2 class="cert-title">PakValuate Pro — Market Valuation Certificate</h2>
+                  <span class="cert-subtitle">Powered by XGBoost AI & Real PakWheels / OLX Market Intelligence</span>
+                </div>
+              </div>
+              <div class="cert-meta-box">
+                <div class="cert-id" id="cert-id-val">PKV-2026-847291</div>
+                <div class="cert-date" id="cert-date-val">September 2026</div>
+                <button type="button" class="btn-print-cert print-hide" onclick="window.print()">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>Download / Print PDF</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Vehicle Summary Tag Strip -->
+            <div class="cert-vehicle-strip" id="cert-vehicle-strip">
+              <div class="cv-pill"><strong id="cv-vehicle-title">2021 Toyota Corolla Altis 1.6</strong></div>
+              <div class="cv-pill"><span id="cv-km">45,000 km</span></div>
+              <div class="cv-pill"><span id="cv-city">Islamabad Reg</span></div>
+              <div class="cv-pill"><span id="cv-trans">Automatic • Petrol</span></div>
+              <div class="cv-pill"><span id="cv-engine">1600 cc</span></div>
+            </div>
+
+            <!-- PRIMARY VALUE BANNER (WHAT IS THE CAR WORTH?) -->
+            <div class="cert-valuation-hero">
+              <div class="cvh-main">
+                <span class="cvh-label">FAIR MARKET VALUE</span>
+                <div class="cvh-price-row">
+                  <h1 class="cvh-price" id="cert-fair-val">Rs 38.10 Lacs</h1>
+                  <span class="cvh-exact" id="cert-fair-exact">Rs 3,810,000</span>
+                </div>
+                <div class="cvh-range">
+                  <span>Estimated Market Range:</span>
+                  <strong id="cert-range-val">Rs 36.75 Lacs – Rs 39.45 Lacs</strong>
+                </div>
+              </div>
+
+              <div class="cvh-confidence-meter">
+                <div class="conf-circle">
+                  <span class="conf-num" id="cert-conf-score">88%</span>
+                  <span class="conf-label">Confidence</span>
+                </div>
+                <span class="conf-note">High market listing density in Islamabad/Lahore</span>
+              </div>
+            </div>
+
+            <!-- FOUR SELLING CHANNELS MATRIX -->
+            <div class="cert-channels-grid">
+              <div class="c-channel-card">
+                <span class="cc-label">Fair Market Value</span>
+                <strong class="cc-val" id="cc-fair-val">38.10 Lacs</strong>
+                <span class="cc-sub">Baseline consumer benchmark</span>
+              </div>
+              <div class="c-channel-card highlight">
+                <span class="cc-label">Expected Private-Sale</span>
+                <strong class="cc-val" id="cc-private-val">37.50L – 39.20L</strong>
+                <span class="cc-sub">Realistic direct buyer deal</span>
+              </div>
+              <div class="c-channel-card">
+                <span class="cc-label">Dealer Trade-In Offer</span>
+                <strong class="cc-val" id="cc-dealer-val">34.80L – 36.20L</strong>
+                <span class="cc-sub">Showroom instant cash buyout</span>
+              </div>
+              <div class="c-channel-card">
+                <span class="cc-label">Fast-Sale Target (48 hrs)</span>
+                <strong class="cc-val" id="cc-fast-val">35.40 Lacs</strong>
+                <span class="cc-sub">Quick cash liquidation on OLX</span>
+              </div>
+            </div>
+
+            <!-- MULTI-SCORE CONDITION GAUGES (Overall, Body, Mechanical, Interior, History, Mileage, Structural) -->
+            <div class="cert-scores-section">
+              <h3 class="cert-subheading">Vehicle Health & Condition Scores</h3>
+              <div class="scores-dials-grid">
+                <div class="score-dial-card">
+                  <div class="sdc-circle green" id="sdc-overall">86</div>
+                  <span class="sdc-title">Overall Health</span>
+                </div>
+                <div class="score-dial-card">
+                  <div class="sdc-circle" id="sdc-exterior">82</div>
+                  <span class="sdc-title">Exterior Paint</span>
+                </div>
+                <div class="score-dial-card">
+                  <div class="sdc-circle" id="sdc-mechanical">88</div>
+                  <span class="sdc-title">Mechanical</span>
+                </div>
+                <div class="score-dial-card">
+                  <div class="sdc-circle" id="sdc-interior">90</div>
+                  <span class="sdc-title">Interior Cabin</span>
+                </div>
+                <div class="score-dial-card">
+                  <div class="sdc-circle" id="sdc-history">95</div>
+                  <span class="sdc-title">Ownership History</span>
+                </div>
+                <div class="score-dial-card">
+                  <div class="sdc-circle" id="sdc-mileage">88</div>
+                  <span class="sdc-title">Mileage Rating</span>
+                </div>
+                <div class="score-dial-card">
+                  <div class="sdc-circle" id="sdc-structural">98</div>
+                  <span class="sdc-title">Structural Seals</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- EXPLAINABLE AI (SHAP-STYLE FEATURE CONTRIBUTIONS) -->
+            <div class="cert-explainable-section">
+              <h3 class="cert-subheading">Explainable AI: Why Is The Car Worth This Amount?</h3>
+              <p class="cert-explain-intro">
+                Estimated 100% Total Genuine Benchmark for this year & model: <strong id="cert-base-benchmark">Rs 3,950,000</strong>. Here are the quantified condition and market adjustments:
+              </p>
+              <div class="shap-contributions-stack" id="cert-shap-stack">
+                <!-- Dynamically populated line items -->
+              </div>
+            </div>
+
+            <!-- WHAT HELPS VALUE VS WHAT HURTS VALUE -->
+            <div class="cert-helps-hurts-grid">
+              <div class="ch-box helps-box">
+                <div class="ch-head">
+                  <span class="ch-icon">✅</span>
+                  <h4>What Helps This Car's Value</h4>
+                </div>
+                <ul class="ch-list" id="cert-what-helps">
+                  <li>Single private owner enhances resale trust.</li>
+                  <li>Low odometer reading relative to Pakistani market average.</li>
+                  <li>100% factory original inner pillar & apron seals intact.</li>
+                </ul>
+              </div>
+
+              <div class="ch-box hurts-box">
+                <div class="ch-head">
+                  <span class="ch-icon">⚠️</span>
+                  <h4>What Hurts This Car's Value</h4>
+                </div>
+                <ul class="ch-list" id="cert-what-hurts">
+                  <li>Exterior panel paint touchups reduce collector and first-tier buyer interest.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CRITICAL SAFETY & RESALE WARNINGS -->
+            <div class="cert-warnings-stack" id="cert-warnings-container" style="display: none;">
+              <!-- Dynamically populated alerts -->
+            </div>
+
+            <!-- BUYER ANALYSIS & NEGOTIATION LEVERAGE (If Buyer Mode) -->
+            <div class="cert-buyer-section" id="cert-buyer-analysis-box" style="display: none;">
+              <h3 class="cert-subheading">Buyer Negotiation Leverage & Fair Value Gap</h3>
+              <div class="buyer-diff-card">
+                <div class="bd-col">
+                  <span>Seller Asking Price:</span>
+                  <strong id="cb-asking-price">Rs 4,100,000</strong>
+                </div>
+                <div class="bd-col">
+                  <span>Estimated Fair Value:</span>
+                  <strong id="cb-fair-price">Rs 3,810,000</strong>
+                </div>
+                <div class="bd-col highlight">
+                  <span>Difference / Premium:</span>
+                  <strong id="cb-diff-val">+Rs 290,000 (7.6% above fair value)</strong>
+                </div>
+              </div>
+              <div class="negotiation-checklist">
+                <h4>Recommended Negotiation Checklist:</h4>
+                <ul id="cb-negotiation-points">
+                  <!-- Populated dynamically -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- 6-MONTH HISTORICAL PRICE TREND CHART -->
+            <div class="cert-trend-section">
+              <div class="cts-head">
+                <h3 class="cert-subheading">6-Month Price Trend in Pakistan (March – September 2026)</h3>
+                <span class="cts-badge">Stable Appreciation (+5.0%)</span>
+              </div>
+              <div class="trend-bars-container" id="cert-trend-bars">
+                <!-- Dynamically rendered monthly bars -->
+              </div>
+            </div>
+
+            <!-- REAL MARKET COMPARABLES FROM PAKWHEELS & OLX -->
+            <div class="cert-comparables-section">
+              <div class="comp-head-row">
+                <h3 class="cert-subheading">Similar Verified Vehicles Currently Listed on PakWheels & OLX</h3>
+                <span class="comp-badge">Matched by Variant, City & Condition</span>
+              </div>
+              <div class="cert-comps-grid" id="cert-comparables-grid">
+                <!-- Dynamically populated comparable cards -->
+              </div>
+            </div>
+
+            <!-- OFFICIAL VALUATION DISCLAIMER -->
+            <div class="cert-disclaimer">
+              <strong>Official Automotive Valuation Notice:</strong>
+              <p>
+                Vehicle valuations are estimates based on user-provided information, mathematical depreciation models, and verified PakWheels & OLX Pakistan listings. Actual cash transaction prices may vary based on on-site mechanical inspection, documentation verification, excise tax status, and direct party negotiation. AI-generated visual assessments are estimates and should not replace a professional vehicle inspection.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="step-nav-actions print-hide">
+            <button type="button" class="btn-step-prev" onclick="goToStep(9)">Back to Intent</button>
+            <button type="button" class="btn-step-next primary-calculate" onclick="window.print()">
+              <span>🖨️ Print / Save PDF Certificate</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       QUICK LIVE STUDIO BENTO GRID (FOR INSTANT EXPERIMENTATION)
+       ========================================================================= -->
+  <main class="main-bento-container" id="valuation-engine">
+    <div class="section-header-apple" style="margin-bottom: 24px;">
+      <div class="hero-badge">
+        <span class="badge-icon">🎛️</span>
+        <span>Interactive Valuation Studio</span>
+      </div>
+      <h2 class="section-headline">
+        Instant Studio Controls.<br>
+        <span class="headline-gradient">Live calculations in real-time.</span>
+      </h2>
+      <p class="section-subhead">
+        Adjust specifications and toggle body panels below. The market valuation and condition loss recalculate instantly.
+      </p>
+    </div>
+
+    <div class="bento-layout">
+
+      <!-- LEFT COLUMN: Specifications & Vehicle Setup -->
+      <div class="bento-col-left">
+
+        <!-- Bento Card 1: Specs Matrix -->
+        <div class="apple-card spec-card">
+          <div class="card-eyebrow">
+            <span class="eyebrow-num">01</span>
+            <span class="eyebrow-text">Vehicle Specifications</span>
+          </div>
+          <h2 class="card-headline">Select Make, Model & City</h2>
+          <p class="card-description">
+            Calibrated with live asking prices from PakWheels and OLX Pakistan classifieds.
+          </p>
+
+          <form id="car-form" class="specs-grid-layout" onsubmit="event.preventDefault();">
+            <!-- Make -->
+            <div class="apple-input-group">
+              <label for="select-make">Make / Manufacturer</label>
+              <div class="select-container">
+                <select id="select-make" required></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <!-- Model -->
+            <div class="apple-input-group">
+              <label for="select-model">Model</label>
+              <div class="select-container">
+                <select id="select-model" required></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <!-- Variant -->
+            <div class="apple-input-group col-span-2">
+              <label for="select-variant">Variant / Trim Level</label>
+              <div class="select-container">
+                <select id="select-variant" required></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <!-- Year Slider -->
+            <div class="apple-input-group col-span-2">
+              <div class="slider-header">
+                <label for="input-year">Manufacturing Year</label>
+                <span class="slider-value-badge" id="year-val">2021</span>
+              </div>
+              <input type="range" id="input-year" min="2005" max="2024" value="2021" class="apple-slider">
+              <div class="slider-ticks">
+                <span>2005</span>
+                <span>2010</span>
+                <span>2015</span>
+                <span>2020</span>
+                <span>2024</span>
+              </div>
+            </div>
+
+            <!-- Mileage Slider -->
+            <div class="apple-input-group col-span-2">
+              <div class="slider-header">
+                <label for="input-mileage">Odometer Mileage</label>
+                <span class="slider-value-badge" id="mileage-val">45,000 km</span>
+              </div>
+              <input type="range" id="input-mileage" min="1000" max="250000" step="1000" value="45000" class="apple-slider">
+              <div class="slider-ticks">
+                <span>0 km</span>
+                <span>50k km</span>
+                <span>100k km</span>
+                <span>150k km</span>
+                <span>250k km</span>
+              </div>
+            </div>
+
+            <!-- City Registration -->
+            <div class="apple-input-group">
+              <label for="select-city">Registered City</label>
+              <div class="select-container">
+                <select id="select-city" required></select>
+                <div class="select-arrow"></div>
+              </div>
+              <span class="input-helper" id="city-premium-note">Islamabad: +4% Resale Premium</span>
+            </div>
+
+            <!-- Transmission -->
+            <div class="apple-input-group">
+              <label for="select-transmission">Transmission</label>
+              <div class="select-container">
+                <select id="select-transmission" required></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <!-- Fuel Type -->
+            <div class="apple-input-group">
+              <label for="select-fuel">Fuel Type</label>
+              <div class="select-container">
+                <select id="select-fuel" required></select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+
+            <!-- Engine CC -->
+            <div class="apple-input-group">
+              <label for="input-engine-cc">Engine Capacity (CC)</label>
+              <input type="number" id="input-engine-cc" min="600" max="5000" value="1600" class="apple-text-field">
+            </div>
+          </form>
+        </div>
+
+        <!-- Bento Card 2: 15-Panel Chassis & Poteen Inspector -->
+        <div class="apple-card inspector-card" id="inspector-section">
+          <div class="card-eyebrow">
+            <span class="eyebrow-num">02</span>
+            <span class="eyebrow-text">Pakistani Body Condition Audit</span>
+          </div>
+          <div class="card-title-row">
+            <div>
+              <h2 class="card-headline">Digital Paint & Poteen Inspector</h2>
+              <p class="card-description">
+                Click any panel to toggle condition. Micron readouts match Pakistani 187-point inspection standards.
+              </p>
+            </div>
+            <div class="gauge-pill">
+              <span class="gauge-dot"></span>
+              <span>Digital Gauge Calibrated</span>
+            </div>
+          </div>
+
+          <!-- iOS-Style Toggles for Seals & Accidental Record -->
+          <div class="ios-toggles-grid">
+            <label class="ios-toggle-card">
+              <div class="toggle-info">
+                <div class="toggle-icon-wrap">🔒</div>
+                <div>
+                  <span class="toggle-heading">All Inner Seals Intact & Pack</span>
+                  <span class="toggle-sub">Pillars, aprons & inner seams are factory genuine</span>
+                </div>
+              </div>
+              <div class="ios-switch">
+                <input type="checkbox" id="toggle-seals" checked>
+                <span class="ios-slider"></span>
+              </div>
+            </label>
+
+            <label class="ios-toggle-card">
+              <div class="toggle-info">
+                <div class="toggle-icon-wrap">💥</div>
+                <div>
+                  <span class="toggle-heading">Accidental History</span>
+                  <span class="toggle-sub">Frame, apron impact, or radiator core support damage</span>
+                </div>
+              </div>
+              <div class="ios-switch">
+                <input type="checkbox" id="toggle-accidental">
+                <span class="ios-slider"></span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Apple Action Button -->
+          <button type="button" id="btn-predict" class="apple-cta-primary">
+            <span class="cta-gradient-glow"></span>
+            <span class="cta-content">
+              <span class="cta-glyph">⚡</span>
+              <span>Calculate Market Appraisal in PKR</span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Valuation Studio & Market Analytics -->
+      <div class="bento-col-right">
+
+        <!-- Bento Card 3: The Valuation Display (Pro Studio Hero) -->
+        <div class="apple-card valuation-card" id="valuation-hero">
+          <div class="valuation-card-header">
+            <div>
+              <span class="studio-badge">AI Market Appraisal</span>
+              <span class="market-source-tag">PakWheels & OLX Calibrated</span>
+            </div>
+            <div class="currency-indicator">PKR (Pakistani Rupee)</div>
+          </div>
+
+          <!-- Huge Apple Price Typography -->
+          <div class="apple-price-hero">
+            <div class="price-headline-row">
+              <span class="price-digits" id="display-lacs">38.10</span>
+              <span class="price-unit">Lacs</span>
+            </div>
+            <div class="price-full-row" id="display-full">Rs 3,810,000</div>
+          </div>
+
+          <!-- Fair Market Low & High Strip -->
+          <div class="market-range-shelf">
+            <div class="shelf-col">
+              <span class="shelf-title">Fair Buying Range (Low)</span>
+              <span class="shelf-value" id="display-range-min">Rs 3,675,000 (36.75 Lacs)</span>
+            </div>
+            <div class="shelf-separator"></div>
+            <div class="shelf-col">
+              <span class="shelf-title">Fair Asking Range (High)</span>
+              <span class="shelf-value" id="display-range-max">Rs 3,945,000 (39.45 Lacs)</span>
+            </div>
+          </div>
+
+          <!-- PakWheels Dealer vs OLX Quick Sale Matrix -->
+          <div class="marketplace-benchmark-row">
+            <div class="channel-card pw-channel">
+              <div class="channel-brand">
+                <span class="pw-dot"></span>
+                <strong>PakWheels Asking</strong>
+              </div>
+              <div class="channel-price" id="display-pw-price">41.00 Lacs</div>
+              <span class="channel-sub">Verified Dealer Spread (+4%)</span>
+            </div>
+
+            <div class="channel-card olx-channel">
+              <div class="channel-brand">
+                <span class="olx-dot"></span>
+                <strong>OLX Direct Cash</strong>
+              </div>
+              <div class="channel-price" id="display-olx-price">35.25 Lacs</div>
+              <span class="channel-sub">Quick Private Seller Cash (-4%)</span>
+            </div>
+          </div>
+
+          <!-- Condition Valuation Impact Comparison -->
+          <div class="apple-valuation-loss-card" id="diff-box">
+            <div class="loss-top-row">
+              <span class="loss-label">Valuation Loss Due to Condition:</span>
+              <span class="loss-amount" id="display-loss">Rs 0</span>
+            </div>
+            <div class="loss-benchmark-sub">
+              A 100% Total Genuine counterpart commands <strong id="display-genuine">Rs 3,810,000</strong>
+            </div>
+          </div>
+
+          <!-- Critical Pakistani Market Alerts Container -->
+          <div id="alerts-container" class="alerts-stack"></div>
+
+          <!-- Panel Breakdown Accordion -->
+          <div class="panel-breakdown-card">
+            <div class="breakdown-header">
+              <h3 class="breakdown-title">Panel-by-Panel Market Audit</h3>
+              <span class="breakdown-badge">15 Body Pieces</span>
+            </div>
+            <div class="table-responsive">
+              <table class="apple-table" id="pieces-table">
+                <thead>
+                  <tr>
+                    <th>Body Piece</th>
+                    <th>Condition</th>
+                    <th>Depreciation Impact</th>
+                  </tr>
+                </thead>
+                <tbody id="pieces-tbody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: PakWheels & OLX Market Intelligence -->
+        <div class="apple-card intelligence-card" id="pakwheels-olx-intelligence">
+          <div class="card-eyebrow">
+            <span class="eyebrow-text">Pakistani Automotive Market Dynamics</span>
+          </div>
+          <h3 class="card-headline">PakWheels & OLX Intelligence</h3>
+          <p class="card-description">
+            City premiums and liquidity index reflecting real-time Pakistani demand patterns.
+          </p>
+
+          <div class="city-premium-chips" id="city-chips-container">
+            <div class="city-chip active">
+              <div class="city-chip-head">
+                <span class="city-name">Islamabad (ICT)</span>
+                <span class="premium-badge green">+4.0%</span>
+              </div>
+              <span class="city-desc">Highest resale in Pakistan</span>
+            </div>
+            <div class="city-chip">
+              <div class="city-chip-head">
+                <span class="city-name">Lahore (Punjab)</span>
+                <span class="premium-badge green">+2.0%</span>
+              </div>
+              <span class="city-desc">Largest secondary market</span>
+            </div>
+            <div class="city-chip">
+              <div class="city-chip-head">
+                <span class="city-name">Karachi (Sindh)</span>
+                <span class="premium-badge orange">-5.0%</span>
+              </div>
+              <span class="city-desc">Coastal climate discount in North</span>
+            </div>
+          </div>
+
+          <!-- Liquidity Ticker -->
+          <div class="liquidity-ranking">
+            <div class="ranking-header">
+              <span>Top Resale Liquidity (Avg Days to Sell on OLX & PakWheels)</span>
+            </div>
+            <div class="liquidity-bars">
+              <div class="l-bar-item">
+                <div class="l-bar-meta">
+                  <span>Suzuki Alto (VXL AGS)</span>
+                  <strong>4 Days • 99/100 Liquidity</strong>
+                </div>
+                <div class="l-track"><div class="l-fill" style="width: 99%;"></div></div>
+              </div>
+              <div class="l-bar-item">
+                <div class="l-bar-meta">
+                  <span>Toyota Corolla (Altis 1.6)</span>
+                  <strong>6 Days • 98/100 Liquidity</strong>
+                </div>
+                <div class="l-track"><div class="l-fill" style="width: 98%;"></div></div>
+              </div>
+              <div class="l-bar-item">
+                <div class="l-bar-meta">
+                  <span>Suzuki Cultus (VXL)</span>
+                  <strong>5 Days • 96/100 Liquidity</strong>
+                </div>
+                <div class="l-track"><div class="l-fill" style="width: 96%;"></div></div>
+              </div>
+              <div class="l-bar-item">
+                <div class="l-bar-meta">
+                  <span>Honda Civic (1.8 Oriel)</span>
+                  <strong>9 Days • 94/100 Liquidity</strong>
+                </div>
+                <div class="l-track"><div class="l-fill" style="width: 94%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 5: ML Algorithms Evaluation -->
+        <div class="apple-card benchmark-card" id="benchmarks">
+          <div class="card-eyebrow">
+            <span class="eyebrow-text">Machine Learning Verification</span>
+          </div>
+          <h3 class="card-headline">Algorithm Evaluation & R² Accuracy</h3>
+          <p class="card-description">
+            Evaluated against test dataset derived from PakWheels and OLX market listings.
+          </p>
+
+          <div class="table-responsive">
+            <table class="apple-table benchmark-table">
+              <thead>
+                <tr>
+                  <th>Algorithm</th>
+                  <th>MAE (Lacs)</th>
+                  <th>R² Score</th>
+                  <th>Accuracy</th>
+                </tr>
+              </thead>
+              <tbody id="benchmark-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- BRAND NEW SECTION: Live PakWheels & OLX Pakistan Classifieds Explorer -->
+  <section class="marketplace-section" id="live-marketplace">
+    <div class="marketplace-container">
+      <div class="section-header-apple">
+        <div class="hero-badge">
+          <span class="badge-icon">⚡</span>
+          <span>Live Data Feed</span>
+        </div>
+        <h2 class="section-headline">
+          Live Marketplace.<br>
+          <span class="headline-gradient">Direct from PakWheels & OLX.</span>
+        </h2>
+        <p class="section-subhead">
+          Search and browse verified live listings across Pakistan. Click <strong>Evaluate in Studio</strong> on any car to instantly load its authentic specs and paint condition into the valuation engine.
+        </p>
+      </div>
+
+      <!-- Marketplace Filters Bar (Apple Style Controls) -->
+      <div class="marketplace-filter-shelf">
+        <!-- Search Input -->
+        <div class="market-search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input type="text" id="market-search-input" placeholder="Search by car, make, model or city..." class="market-search-field">
+          <button type="button" id="market-search-clear" class="search-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
+        </div>
+
+        <!-- Source Selector Tabs -->
+        <div class="source-pills" role="tablist">
+          <button type="button" class="source-pill active" data-source="all">
+            <span>All Classifieds</span>
+            <span class="pill-count" id="pill-count-all">361</span>
+          </button>
+          <button type="button" class="source-pill" data-source="pakwheels">
+            <span class="pw-brand-dot"></span>
+            <span>PakWheels</span>
+            <span class="pill-count" id="pill-count-pw">211</span>
+          </button>
+          <button type="button" class="source-pill" data-source="olx">
+            <span class="olx-brand-dot"></span>
+            <span>OLX Pakistan</span>
+            <span class="pill-count" id="pill-count-olx">150</span>
+          </button>
+        </div>
+
+        <!-- Dropdown Filters (City, Make, Sort) -->
+        <div class="market-dropdowns">
+          <div class="filter-select-wrap">
+            <select id="market-filter-city" class="filter-select" aria-label="Filter by City">
+              <option value="all">All Cities</option>
+            </select>
+          </div>
+
+          <div class="filter-select-wrap">
+            <select id="market-filter-make" class="filter-select" aria-label="Filter by Make">
+              <option value="all">All Makes</option>
+            </select>
+          </div>
+
+          <div class="filter-select-wrap">
+            <select id="market-filter-sort" class="filter-select" aria-label="Sort listings">
+              <option value="featured">Sort: Featured</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+              <option value="year_desc">Year: Newest</option>
+              <option value="mileage_asc">Mileage: Lowest</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feed Status & Results Count Bar -->
+      <div class="feed-status-bar">
+        <div class="status-left">
+          <span class="feed-pulse"></span>
+          <span id="results-count-text">Showing 24 of 361 Verified Ads</span>
+        </div>
+        <div class="status-right">
+          <span class="verified-tag">🛡️ Real URLs & Photos</span>
+        </div>
+      </div>
+
+      <!-- Listings Grid (Apple Store Style Product Tiles) -->
+      <div class="listings-grid" id="listings-grid">
+        <!-- Dynamically rendered via JS -->
+      </div>
+
+      <!-- Pagination / Load More -->
+      <div class="load-more-wrapper">
+        <button type="button" id="btn-load-more" class="apple-btn-secondary">
+          <span>Load More Verified Ads</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND NEW SECTION: Apple-Style Vehicle Comparator ("Which Car Fits Your Budget?") -->
+  <section class="comparator-section" id="compare-section">
+    <div class="comparator-container">
+      <div class="section-header-apple">
+        <div class="hero-badge">
+          <span class="badge-icon">⚖️</span>
+          <span>Head-to-Head Analysis</span>
+        </div>
+        <h2 class="section-headline">
+          Compare Pakistani Models.<br>
+          <span class="headline-gradient">Decide with confidence.</span>
+        </h2>
+        <p class="section-subhead">
+          Evaluate resale velocity, PakWheels dealer prices, and OLX market demand between two models.
+        </p>
+      </div>
+
+      <!-- Comparator Selector Row -->
+      <div class="comparator-controls">
+        <div class="comp-selector-box">
+          <label for="compare-select-1">Primary Model:</label>
+          <select id="compare-select-1" class="apple-select-box">
+            <option value="Alto" selected>Suzuki Alto</option>
+            <option value="Cultus">Suzuki Cultus</option>
+            <option value="Corolla">Toyota Corolla</option>
+            <option value="Civic">Honda Civic</option>
+            <option value="City">Honda City</option>
+            <option value="Sportage">KIA Sportage</option>
+            <option value="Yaris">Toyota Yaris</option>
+            <option value="Wagon R">Suzuki Wagon R</option>
+          </select>
+        </div>
+
+        <div class="comp-vs-badge">VS</div>
+
+        <div class="comp-selector-box">
+          <label for="compare-select-2">Compare Against:</label>
+          <select id="compare-select-2" class="apple-select-box">
+            <option value="Alto">Suzuki Alto</option>
+            <option value="Cultus" selected>Suzuki Cultus</option>
+            <option value="Corolla">Toyota Corolla</option>
+            <option value="Civic">Honda Civic</option>
+            <option value="City">Honda City</option>
+            <option value="Sportage">KIA Sportage</option>
+            <option value="Yaris">Toyota Yaris</option>
+            <option value="Wagon R">Suzuki Wagon R</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Comparison Cards Layout -->
+      <div class="comparison-grid" id="comparison-results">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Apple Frosted Glass Modal for Panel Condition -->
+  <div class="apple-modal-backdrop" id="piece-modal">
+    <div class="apple-modal-box">
+      <div class="modal-top">
+        <div>
+          <span class="modal-eyebrow">Inspection Selector</span>
+          <h3 class="modal-title" id="modal-piece-name">Select Panel Condition</h3>
+        </div>
+        <button type="button" class="modal-close-icon" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <p class="modal-caption">
+        Select paint thickness and body filler status per digital paint gauge or physical inspection report:
+      </p>
+
+      <div class="apple-modal-options">
+        <button type="button" class="apple-opt-btn" data-status="genuine">
+          <div class="opt-left">
+            <span class="status-indicator genuine"></span>
+            <div>
+              <strong>100% Total Genuine Paint</strong>
+              <p>Factory finish, paint gauge 80–120 microns. No touchup or putty compound.</p>
+            </div>
+          </div>
+          <span class="opt-tag">0% Impact</span>
+        </button>
+
+        <button type="button" class="apple-opt-btn" data-status="touchup_no_putty">
+          <div class="opt-left">
+            <span class="status-indicator touchup"></span>
+            <div>
+              <strong>Cosmetic Touchup (Without Poteen)</strong>
+              <p>Surface scratch spray only. 130–180 microns. No denting or filler compound.</p>
+            </div>
+          </div>
+          <span class="opt-tag mild">-1.5% to -3.5%</span>
+        </button>
+
+        <button type="button" class="apple-opt-btn" data-status="putty">
+          <div class="opt-left">
+            <span class="status-indicator putty"></span>
+            <div>
+              <strong>Repainted With Poteen / Putty (Bondo)</strong>
+              <p>High gauge reading (>250 microns). Panel dented and leveled with body filler.</p>
+            </div>
+          </div>
+          <span class="opt-tag warn">-4.0% to -16%</span>
+        </button>
+
+        <button type="button" class="apple-opt-btn" data-status="replaced">
+          <div class="opt-left">
+            <span class="status-indicator replaced"></span>
+            <div>
+              <strong>Replaced Panel (Aftermarket / Kabli)</strong>
+              <p>Original sheet metal panel removed and replaced with Taiwan/Kabli unit.</p>
+            </div>
+          </div>
+          <span class="opt-tag danger">-5.5% to -25%</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING AI CAR VALUATION CHATBOT -->
+  <div class="chatbot-floating-trigger" id="chatbot-trigger" onclick="toggleChatbot()">
+    <div class="cbt-icon">💬</div>
+    <div class="cbt-label">
+      <span class="cbt-title">AI Valuation Assistant</span>
+      <span class="cbt-sub">Ask any car's worth</span>
+    </div>
+  </div>
+
+  <div class="chatbot-modal-window" id="chatbot-modal" style="display: none;">
+    <div class="cbm-header">
+      <div class="cbm-title-group">
+        <span class="cbm-bot-dot"></span>
+        <div>
+          <h4>PakValuate AI Assistant</h4>
+          <span>PakWheels & OLX Trained</span>
+        </div>
+      </div>
+      <button type="button" class="cbm-close-btn" onclick="toggleChatbot()">&times;</button>
+    </div>
+    <div class="cbm-messages" id="chatbot-messages">
+      <div class="bot-msg">
+        <p>Salam! I can estimate the fair market value of any used car in Pakistan. Try asking me:</p>
+        <span class="prompt-chip" onclick="sendChatPrompt('2021 Corolla Altis 1.6 in Islamabad with 45k km')">"2021 Corolla Altis 1.6 in Islamabad 45k km"</span>
+        <span class="prompt-chip" onclick="sendChatPrompt('2020 Suzuki Alto VXL in Lahore with 35k km')">"2020 Alto VXL in Lahore 35k km"</span>
+      </div>
+    </div>
+    <form class="cbm-input-bar" id="chatbot-form" onsubmit="event.preventDefault(); submitChatMessage();">
+      <input type="text" id="chatbot-input" placeholder="Type vehicle details (e.g. 2021 Civic in Lahore 50k km)..." autocomplete="off">
+      <button type="submit" class="cbm-send-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- Apple Minimalist Footer -->
+  <footer class="apple-footer print-hide">
+    <div class="footer-container">
+      <div class="footer-legal">
+        <p>PakValuate Pro • Built for Pakistan Automotive Intelligence • Inspired by Apple Design & Kelley Blue Book Standards</p>
+        <p class="footer-sub">
+          Valuations reflect live PakWheels.com & OLX Pakistan listings, inflation dynamics, provincial excise tax structures, and piece-by-piece paint degradation models.
+        </p>
+      </div>
+      <div class="footer-badges">
+        <span class="f-badge">PakWheels Verified Standards</span>
+        <span class="f-badge">OLX Pakistan Market Spread</span>
+        <span class="f-badge">XGBoost & Random Forest Core</span>
+        <span class="f-badge">15-Panel Micron Paint Audit</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
